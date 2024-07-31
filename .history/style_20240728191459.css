@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background: linear-gradient(135deg, #00bfff, #ff69b4); /* Gradient background */
+  color: #fff; /* Default text color */
+}
+
+.main {
+  min-height: 100vh;
+  max-width: 100vw; /* Restricts the width to the viewport width */
+  max-height: 100vh; /* Restricts the height to the viewport height */
+  position: relative;
+  width: 100%;
+  background: url('jarvisf.gif') no-repeat center center;
+  background-size: cover; /* Ensure the GIF covers the whole container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  overflow: hidden; /* Ensures no overflow */
+}
+
+.main .image-container {
+  padding: 15px; /* Increased padding */
+  width: 100%; /* Full width of the container */
+}
+
+.main .image-container .image {
+  width: 100%; /* Full width of the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .image-container h1 {
+  color: #ff4500; /* Updated header color */
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 48px; /* Larger font size */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+}
+
+.main .image-container p {
+  color: #adff2f; /* Updated paragraph color */
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px; /* Larger font size */
+}
+
+.main .input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw; /* Width of the button container */
+  height: 60px; /* Height of the button container */
+  border-radius: 30px; /* More rounded corners */
+  background: linear-gradient(135deg, #4b0082, #8a2be2); /* Gradient background for button */
+  margin-top: 380px; /* Margin from the top */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.main .input:hover {
+  background: linear-gradient(135deg, #71f862, #030dd8); /* Darker gradient on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.main .input .talk {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 60px; /* Width of the talk button */
+  height: 60px; /* Height of the talk button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Adjusted font size for icon */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.main .input .talk i {
+  margin:7rem ;
+  font-size: 36px; /* Size of the icon */
+  color: #e0ffff; /* Icon color */
+}
+
+.main .input:hover .talk i {
+  color: #ffffff; /* Icon color change on hover */
+}
+
+.main .input .content {
+  color: #eceeed; /* Text color in the input area */
+  font-size: 18px; /* Font size for content */
+  margin-left: 15px; /* Adjusted margin */
+}
+
+.history-btn,
+.commands-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7); /* Background color */
+  color: #fff; /* Icon color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.commands-btn {
+  right: 80px; /* Positioning the commands button */
+}
+
+.history-btn:hover,
+.commands-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Background overlay */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.modal-content h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.modal-content ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.modal-content ul li {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.close,
+.close-commands {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close-commands:hover,
+.close:focus,
+.close-commands:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

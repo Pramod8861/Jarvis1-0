@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS</title>
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <section class="main">
+        <div class="image-container">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="input">
+            <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+            <h1 class="content">Click here to speak</h1>
+        </div>
+    </section>
+    <button class="history-btn"><i class="fas fa-list"></i></button>
+    <button class="commands-btn"><i class="fas fa-info-circle"></i></button>
+
+    <div id="history-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Interaction History</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <div id="commands-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-commands">&times;</span>
+            <h2>Available Commands</h2>
+            <ul>
+                <li>Hey/Hello</li>
+                <li>Open Google</li>
+                <li>Open YouTube</li>
+                <li>Open Facebook</li>
+                <li>What is/Who is/What are</li>
+                <li>Wikipedia</li>
+                <li>Time</li>
+                <li>Date</li>
+                <li>Play Music</li>
+                <li>Play Another Music</li>
+                <li>Do not leave me buddy/Do not leave me</li>
+                <li>Question</li>
+                <li>Kuch naya dalen</li>
+                <li>Open ChatGPT</li>
+                <li>Start Conversation</li>
+                <li>Stop</li>
+                <li>Love you Jarvis</li>
+                <li>Tell me a joke</li>
+                <li>Exit/Bye/Thank you</li>
+                <li>How are you</li>
+                <li>What can you do</li>
+                <li>{*say your song name*} find on youtube</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
