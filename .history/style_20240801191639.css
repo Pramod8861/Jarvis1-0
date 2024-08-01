@@ -24,7 +24,7 @@ body {
   justify-content: center;
   border-radius: 10px; 
   padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 4px 8px rgba(255, 1, 1, 0.5); 
   overflow: hidden; 
 }
 
@@ -103,10 +103,9 @@ body {
 }
 
 .main .input .content {
-  color: #ffffff; 
-  font-size: 22px; 
-  margin-bottom:5px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ddeee5; 
+  font-size: 20px; 
+  margin-bottom: 10px;
 }
 
 .main .input .speech-output {

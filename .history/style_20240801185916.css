@@ -7,7 +7,7 @@
 
 body {
   background: linear-gradient(135deg, #00bfff, #ff69b4); 
-  color: #f4f4f4;
+  color: #fff;
 }
 
 .main {
@@ -71,11 +71,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:5.625rem ;
-  height: 5.625rem;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: linear-gradient(135deg, #4b0082, #8a2be2); 
-  margin-bottom: 0.4rem; 
+  margin-bottom: 20px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
@@ -94,8 +94,8 @@ body {
 }
 
 .main .input .talk i {
-  font-size:50px; 
-  color: #ffffff; 
+  font-size: 36px; 
+  color: #e0ffff; 
 }
 
 .main .input:hover .talk i {
@@ -103,17 +103,16 @@ body {
 }
 
 .main .input .content {
-  color: #ffffff; 
-  font-size: 22px; 
-  margin-bottom:5px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #eceeed; 
+  font-size: 18px; 
+  margin-bottom: 10px;
 }
 
 .main .input .speech-output {
   width: 80%; /* Adjust width as needed */
   padding: 15px; 
-  background-color: rgba(35, 173, 4, 0.8); 
-  color: #333; 
+  background-color: rgba(207, 28, 28, 0.8); 
+  color: #ecd9d9; 
   font-size: 16px; 
   border-radius: 8px; 
   margin-top: 10px; 

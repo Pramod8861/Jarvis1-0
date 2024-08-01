@@ -103,10 +103,9 @@ body {
 }
 
 .main .input .content {
-  color: #ffffff; 
-  font-size: 22px; 
-  margin-bottom:5px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ddeee5; 
+  font-size: 20px; 
+  margin-bottom: 10px;
 }
 
 .main .input .speech-output {
@@ -137,7 +136,7 @@ body {
   font-size: 24px;
   cursor: pointer;
   margin-left: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 40px 8px rgba(0, 0, 0, 0.3); 
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 

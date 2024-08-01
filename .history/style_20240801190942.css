@@ -103,10 +103,9 @@ body {
 }
 
 .main .input .content {
-  color: #ffffff; 
-  font-size: 22px; 
-  margin-bottom:5px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ddeee5; 
+  font-size: 18px; 
+  margin-bottom: 10px;
 }
 
 .main .input .speech-output {

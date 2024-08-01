@@ -104,9 +104,8 @@ body {
 
 .main .input .content {
   color: #ffffff; 
-  font-size: 22px; 
-  margin-bottom:5px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px; 
+  margin-bottom: 10px;
 }
 
 .main .input .speech-output {
