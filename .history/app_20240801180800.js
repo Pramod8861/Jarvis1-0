@@ -126,7 +126,7 @@ btn.addEventListener('click', () => {
 
 historyBtn.addEventListener('click', async () => {
     historyModal.style.display = 'block';
-    const interactions = await fetch('https://tell-some-crazy-y22t.onrender.com/interactions').then(res => res.json());
+    const interactions = await fetch('http://localhost:5000/interactions').then(res => res.json());
     historyList.innerHTML = '';
     interactions.forEach(interaction => {
         const li = document.createElement('li');
