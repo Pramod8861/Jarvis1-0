@@ -57,26 +57,20 @@ body {
 
 .main .input {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50vw;
+  height: 60px; 
+  border-radius: 30px;
+  background: linear-gradient(135deg, #4b0082, #8a2be2); 
   margin-top: 380px; 
-  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.main .input .circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #4b0082, #8a2be2); 
-  margin-bottom: 20px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+.main .input:hover {
+  background: linear-gradient(135deg, #71f862, #030dd8);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .main .input .talk {
@@ -94,6 +88,7 @@ body {
 }
 
 .main .input .talk i {
+  margin: 7rem;
   font-size: 36px; 
   color: #e0ffff; 
 }
@@ -105,13 +100,7 @@ body {
 .main .input .content {
   color: #eceeed; 
   font-size: 18px; 
-  margin-bottom: 10px;
-}
-
-.main .input .speech-output {
-  color: #eceeed; 
-  font-size: 16px; 
-  margin-top: 10px; 
+  margin-left: 15px; 
 }
 
 .history-btn,
@@ -144,6 +133,7 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
 }
 
+
 .modal-content h2 {
   color: #333;
   margin-bottom: 15px;
@@ -168,7 +158,6 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
 /* Modal Background */
 .modal {
   display: none; /* Hidden by default */
@@ -182,7 +171,6 @@ body {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
@@ -193,7 +181,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
 .close, .close-commands {
   color: #aaa;
   float: right;
@@ -211,7 +198,7 @@ body {
 /* Heading */
 h2 {
   color: #333;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Command List */
@@ -234,10 +221,10 @@ h2 {
 /* Hover Effect */
 .command-list li:hover {
   background-color: #49c1f5;
-  color: white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
+  color:white ;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
 
+}
 #history-list {
   list-style-type: none;
   padding: 0;
