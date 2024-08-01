@@ -99,11 +99,11 @@ body {
 }
 
 .main .input:hover .talk i {
-  color: #fe1313; 
+  color: #ffffff; 
 }
 
 .main .input .content {
-  color: #000000; 
+  color: #ffffff; 
   font-size: 22px; 
   margin-bottom:5px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -112,7 +112,7 @@ body {
 .main .input .speech-output {
   width: 80%; /* Adjust width as needed */
   padding: 15px; 
-  background-color: rgba(45, 245, 0, 0.8); 
+  background-color: rgba(35, 173, 4, 0.8); 
   color: #333; 
   font-size: 16px; 
   border-radius: 8px; 
@@ -254,10 +254,11 @@ h2 {
   padding: 8px;
   border-bottom: 1px solid #771212;
 }
+/* Add this to your existing CSS */
+.main .input .talk:active {
+  color: #ff0000; /* Change to your desired color */
+}
 
 .main .input .talk:active i {
-  color: #f40909; /* Change to your desired color */
-}
-.main .input .circle:hover {
-  background: #0ff6d3; /* Change to your desired color */
+  color: #252222; /* Change to your desired color */
 }

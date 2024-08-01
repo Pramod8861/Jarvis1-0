@@ -99,7 +99,7 @@ body {
 }
 
 .main .input:hover .talk i {
-  color: #fe1313; 
+  color: #e61414; 
 }
 
 .main .input .content {
@@ -257,7 +257,4 @@ h2 {
 
 .main .input .talk:active i {
   color: #f40909; /* Change to your desired color */
-}
-.main .input .circle:hover {
-  background: #0ff6d3; /* Change to your desired color */
 }
