@@ -239,7 +239,7 @@ async function takeCommand(message) {
 
         }  else if (message.includes('play bhajan')) {
         await speak("Sure! Sir");
-        const musicUrl = 'https://audio.jukehost.co.uk/lhpVCy0DVBkxRA0YYkP6CQvdZYP02uTG'; 
+        const musicUrl = 'https://audio.jukehost.Ydjl7W0xDy'; 
         audio = new Audio(musicUrl);
         audio.play();    
 
