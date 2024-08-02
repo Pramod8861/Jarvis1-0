@@ -236,6 +236,7 @@ h2 {
   color: #555;
 }
 
+/* Hover Effect */
 .command-list li:hover {
   background-color: #49c1f5;
   color: white;

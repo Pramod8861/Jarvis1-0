@@ -110,7 +110,7 @@ body {
 }
 
 .main .input .speech-output {
-  width: 80%;
+  width: 80%; /* Adjust width as needed */
   padding: 15px; 
   background-color: rgba(45, 245, 0, 0.8); 
   color: #333; 
@@ -178,23 +178,24 @@ body {
 
 /* Modal Background */
 .modal {
-  display: none;
-  position: fixed; 
-  z-index: 1; 
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; 
+  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 80%; /* Could be more or less, depending on screen size */
   max-width: 600px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -220,6 +221,7 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Command List */
 .command-list {
   list-style-type: none;
   padding: 0;
@@ -236,6 +238,7 @@ h2 {
   color: #555;
 }
 
+/* Hover Effect */
 .command-list li:hover {
   background-color: #49c1f5;
   color: white;

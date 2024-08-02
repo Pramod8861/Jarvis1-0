@@ -110,7 +110,7 @@ body {
 }
 
 .main .input .speech-output {
-  width: 80%;
+  width: 80%; /* Adjust width as needed */
   padding: 15px; 
   background-color: rgba(45, 245, 0, 0.8); 
   color: #333; 
@@ -220,6 +220,7 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Command List */
 .command-list {
   list-style-type: none;
   padding: 0;
@@ -236,6 +237,7 @@ h2 {
   color: #555;
 }
 
+/* Hover Effect */
 .command-list li:hover {
   background-color: #49c1f5;
   color: white;
