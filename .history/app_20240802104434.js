@@ -195,7 +195,7 @@ async function takeCommand(message) {
             await speak("The date is " + date);
         } else if (message.includes('play music')) {
             await speak("Sure! Sir");
-            const musicUrl = 'https://audio.jukehost.co.uk/zOf6cHTSuVbmMxSfsGP003tTKsrfe6QN'; 
+            const musicUrl = 'https://audio.jukeho.co.uk/zOf6cHTSuVbmMxSfsGP003tTKsrfe6QN'; 
             audio = new Audio(musicUrl);
             audio.play();
         } else if (message.includes('play another music')) {
