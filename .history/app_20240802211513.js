@@ -230,13 +230,7 @@ async function takeCommand(message) {
             const musicUrl = 'https://audio.jukehost.co.uk/0Gjb18OPzbnGTCrg0QxoYWZdjVtLUiEY'; 
             audio = new Audio(musicUrl);
             audio.play();
-        
-        } else if (message.includes('play odia music')) {
-            await speak("Sure! Sir");
-            const musicUrl = 'https://audio.jukehost.co.uk/B4jDdQBtCXVYffzPNkHeMAYdjl7W0xDy'; 
-            audio = new Audio(musicUrl);
-            audio.play();    
-
+            
         } else if (message.includes('stop music')) {
             if (audio) {
                 audio.pause();

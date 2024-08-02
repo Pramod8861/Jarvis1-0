@@ -233,7 +233,7 @@ async function takeCommand(message) {
         
         } else if (message.includes('play odia music')) {
             await speak("Sure! Sir");
-            const musicUrl = 'https://audio.jukehost.co.uk/B4jDdQBtCXVYffzPNkHeMAYdjl7W0xDy'; 
+            const musicUrl = 'httpOPzbnGTCrg0QxoYWZdjVtLUiEY'; 
             audio = new Audio(musicUrl);
             audio.play();    
 
