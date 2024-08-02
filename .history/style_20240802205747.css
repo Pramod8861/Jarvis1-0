@@ -243,13 +243,13 @@ h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#history-list {
+/*#history-list {
   list-style-type: none;
   padding: 0;
-}
+}*/
 
 #history-list li {
-  padding: 10px;
+  padding: 8px;
   border-bottom: 1px solid #280eef;
 }
 

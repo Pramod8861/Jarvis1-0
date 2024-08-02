@@ -129,42 +129,6 @@ btn.addEventListener('click', () => {
     }
 });
 
-historyBtn.addEventListener('click', async () => {
-    try {
-        historyModal.style.display = 'block';
-        const response = await fetch('https://tell-some-crazy-y22t.onrender.com/interactions');
-        
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        
-        const data = await response.json();
-        console.log('API Response:', data); // Log the entire response
-
-        // Assume data might be an object containing interactions
-        const interactions = data.interactions || data; // Adjust based on actual response structure
-        
-        historyList.innerHTML = ''; // Clear the list before appending new items
-        
-        if (Array.isArray(interactions)) {
-            if (interactions.length === 0) {
-                historyList.innerHTML = '<li>No interactions found.</li>';
-            } else {
-                interactions.forEach(interaction => {
-                    const li = document.createElement('li');
-                    li.textContent = `${interaction.speaker}: ${interaction.message}`;
-                    historyList.appendChild(li);
-                });
-            }
-        } else {
-            throw new Error('API response is not an array');
-        }
-    } catch (error) {
-        console.error('Error fetching interaction history:', error);
-        historyList.innerHTML = '<li>Failed to load history. Please try again later.</li>';
-    }
-});
-
 
 
 commandsBtn.addEventListener('click', () => {

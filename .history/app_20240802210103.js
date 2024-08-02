@@ -130,42 +130,23 @@ btn.addEventListener('click', () => {
 });
 
 historyBtn.addEventListener('click', async () => {
+    historyModal.style.display = 'block';
     try {
-        historyModal.style.display = 'block';
-        const response = await fetch('https://tell-some-crazy-y22t.onrender.com/interactions');
+        const interactions = await fetch('https://tell-some-crazy-y22t.onrender.com/interactions')
+            .then(res => res.json());
         
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        
-        const data = await response.json();
-        console.log('API Response:', data); // Log the entire response
-
-        // Assume data might be an object containing interactions
-        const interactions = data.interactions || data; // Adjust based on actual response structure
-        
+        console.log("Fetched interactions:", interactions);
         historyList.innerHTML = ''; // Clear the list before appending new items
-        
-        if (Array.isArray(interactions)) {
-            if (interactions.length === 0) {
-                historyList.innerHTML = '<li>No interactions found.</li>';
-            } else {
-                interactions.forEach(interaction => {
-                    const li = document.createElement('li');
-                    li.textContent = `${interaction.speaker}: ${interaction.message}`;
-                    historyList.appendChild(li);
-                });
-            }
-        } else {
-            throw new Error('API response is not an array');
-        }
+
+        interactions.forEach(interaction => {
+            const li = document.createElement('li');
+            li.textContent = `${interaction.speaker}: ${interaction.message}`;
+            historyList.appendChild(li);
+        });
     } catch (error) {
-        console.error('Error fetching interaction history:', error);
-        historyList.innerHTML = '<li>Failed to load history. Please try again later.</li>';
+        console.error('Error fetching interactions:', error);
     }
 });
-
-
 
 commandsBtn.addEventListener('click', () => {
     commandsModal.style.display = 'block';
@@ -249,32 +230,12 @@ async function takeCommand(message) {
         } else if (message.includes('thank you')) {
             await speak("You're welcome! Don't hesitate to reach out if you need further assistance.");
         } else if (message.includes('love you jarvis')) {
-            await speak("I love you, mi amour! I appreciate that.");
-        } else if (message.includes('tell me a joke')) {
-            await speak("Why don't scientists trust atoms? Because they make up everything!");
-        } else if (message.includes('exit') || message.includes('bye') || message.includes('stop')) {
-            await speak("Goodbye! If you need assistance, feel free to ask.");
-            setTimeout(() => {
-                window.open('about:blank', '_self').close();
-                const smileWindow = window.open('', 'smileWindow', 'width=300,height=200');
-                smileWindow.document.write('<html><body><h1>😊</h1></body></html>');
-            }, 6000);
-        } else if (message.includes('how are you')) {
-            await speak("I'm just a computer program, but I'm here and ready to help!");
-        } else if (message.includes('what can you do')) {
-            await speak("I can do a variety of things, including searching the web, playing music, and answering questions. How can I help you today?");
-        } else if (message.includes('find on youtube')) {
-            const songName = message.replace('find on youtube', '').trim();
-            const youtubeUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(songName)}`;
-            handlePopup(youtubeUrl, "_blank");
-            await speak(`Searching for ${songName} on YouTube`);
+            await speak("I love you, mi amour! Have a fantastic day ahead.");
         } else {
-            handlePopup(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
-            await speak("I found some information for " + message + " on Google");
+            await speak("Sorry, I didn't understand that.");
         }
     } catch (error) {
-        await speak("Sorry, I can't do that right now.");
-        console.error("Error taking command:", error);
+        console.error('Error taking command:', error);
     }
 }
 

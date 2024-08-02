@@ -138,11 +138,8 @@ historyBtn.addEventListener('click', async () => {
             throw new Error('Network response was not ok');
         }
         
-        const data = await response.json();
-        console.log('API Response:', data); // Log the entire response
-
-        // Assume data might be an object containing interactions
-        const interactions = data.interactions || data; // Adjust based on actual response structure
+        const interactions = await response.json();
+        console.log('API Response:', interactions); // Add this line to inspect the response
         
         historyList.innerHTML = ''; // Clear the list before appending new items
         

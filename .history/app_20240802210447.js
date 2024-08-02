@@ -138,33 +138,23 @@ historyBtn.addEventListener('click', async () => {
             throw new Error('Network response was not ok');
         }
         
-        const data = await response.json();
-        console.log('API Response:', data); // Log the entire response
-
-        // Assume data might be an object containing interactions
-        const interactions = data.interactions || data; // Adjust based on actual response structure
-        
+        const interactions = await response.json();
         historyList.innerHTML = ''; // Clear the list before appending new items
         
-        if (Array.isArray(interactions)) {
-            if (interactions.length === 0) {
-                historyList.innerHTML = '<li>No interactions found.</li>';
-            } else {
-                interactions.forEach(interaction => {
-                    const li = document.createElement('li');
-                    li.textContent = `${interaction.speaker}: ${interaction.message}`;
-                    historyList.appendChild(li);
-                });
-            }
+        if (interactions.length === 0) {
+            historyList.innerHTML = '<li>No interactions found.</li>';
         } else {
-            throw new Error('API response is not an array');
+            interactions.forEach(interaction => {
+                const li = document.createElement('li');
+                li.textContent = `${interaction.speaker}: ${interaction.message}`;
+                historyList.appendChild(li);
+            });
         }
     } catch (error) {
         console.error('Error fetching interaction history:', error);
         historyList.innerHTML = '<li>Failed to load history. Please try again later.</li>';
     }
 });
-
 
 
 commandsBtn.addEventListener('click', () => {
