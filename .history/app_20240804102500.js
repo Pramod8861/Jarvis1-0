@@ -197,7 +197,7 @@ function addToHistory(speaker, message) {
 
 async function takeCommand(message) {
     try {
-        if (message.includes('hey') || message.includes('hello') || message.includes('hi')  ) {
+        if (message.includes('hey') || message.includes('hello') ||  ) {
             await speak("Hello Sir, How May I Help You?");
         } else if (message.includes("open google")) {
             handlePopup("https://google.com", "_blank");
