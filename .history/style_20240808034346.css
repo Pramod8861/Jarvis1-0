@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background: linear-gradient(135deg, #00bfff, #ff69b4); 
+  color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  color: #333;
+}
+
+.main {
+  min-height: 100vh;
+  max-width: 100vw; 
+  max-height: 100vh; 
+  position: relative;
+  width: 100%;
+  background: url('jarvisf.gif') no-repeat center center;
+  background-size: cover; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; 
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  overflow: hidden; 
+}
+
+.main .image-container {
+  padding: 15px; 
+  width: 100%; 
+}
+
+.main .image-container .image {
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .image-container h1 {
+  color: #ff4500; 
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 48px; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.main .image-container p {
+  color: #adff2f;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px; 
+}
+
+.main .input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  margin-top: 380px; 
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main .input .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:4.85rem ;
+  height:4.85rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4b0082, #a471d4); 
+  margin-bottom: 0.2rem; 
+  margin-top: -20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.main .input .talk {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 60px; 
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; 
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.main .input .talk i {
+  font-size:50px; 
+  color: #ffffff; 
+}
+
+.main .input:hover .talk i {
+  color: #fe1313; 
+}
+
+.main .input .content {
+  color: #000000; 
+  font-size: 22px; 
+  margin-bottom:5px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main .input .speech-output {
+  width: 80%;
+  padding: 10px; 
+  background-color: rgba(45, 245, 0, 0.8); 
+  color: #333; 
+  font-size: 10px; 
+  border-radius: 8px; 
+  margin-top:5px; 
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.history-btn,
+.commands-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: #fff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.commands-btn {
+  right: 80px; 
+}
+
+.history-btn:hover,
+.commands-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.modal-content ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.modal-content ul li {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.close:hover,
+.close-commands:hover,
+.close:focus,
+.close-commands:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.close, .close-commands {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-commands:hover,
+.close-commands:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Heading */
+h2 {
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.command-list {
+  list-style-type: none;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.command-list li {
+  background-color: #e5ffef;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  font-size: 16px;
+  color: #555;
+}
+
+.command-list li:hover {
+  background-color: #49c1f5;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#history-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#history-list li {
+  padding: 8px;
+  border-bottom: 1px solid #280eef;
+}
+
+.main .input .talk:active i {
+  color: #f40909; 
+}
+.main .input .circle:hover {
+  background: #0ff6d3; 
+}
+
+
+/* Basic reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.modal1 {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(5px); 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+
+.modal-content {
+  background-color: #b0c1b3;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  max-width: 400px;
+  text-align: center;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#start-jarvis {
+  background-color: #1d06ed; 
+  color: rgb(255, 252, 252);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#start-jarvis:hover {
+  background-color: #1ef196; 
+  color:#000 ; 
+}
+
+.close, .close-commands {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus,
+.close-commands:hover,
+.close-commands:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
