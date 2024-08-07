@@ -162,7 +162,7 @@ historyBtn.addEventListener('click', async () => {
 
         const interactions =  data; 
         
-        historyList.innerHTML = ''; 
+        historyList.innerHTML = ''; // Clear the list before appending new items
         
         if (Array.isArray(interactions)) {
             if (interactions.length === 0) {

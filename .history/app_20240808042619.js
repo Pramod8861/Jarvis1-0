@@ -158,11 +158,12 @@ historyBtn.addEventListener('click', async () => {
         }
         
         const data = await response.json();
-        console.log('API Response:', data); 
+        console.log('API Response:', data); // Log the entire response
 
-        const interactions =  data; 
+        // Assume data might be an object containing interactions
+        const interactions =  data; // Adjust based on actual response structure
         
-        historyList.innerHTML = ''; 
+        historyList.innerHTML = ''; // Clear the list before appending new items
         
         if (Array.isArray(interactions)) {
             if (interactions.length === 0) {
