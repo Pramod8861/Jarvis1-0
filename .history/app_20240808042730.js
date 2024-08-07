@@ -199,42 +199,16 @@ function addToHistory(speaker, message) {
     historyItem.textContent = `${speaker}: ${message}`;
     historyList.appendChild(historyItem);
 }
+
 async function takeCommand(message) {
     try {
-        if (message.includes('hey') || message.includes('hello') || message.includes('hi')  ) {
-            await speak("Hello Sir, How May I Help You?");
-        } else if (message.includes("open google")) {
-            handlePopup("https://google.com", "_blank");
-            await speak("Opening Google...");
-        } else if (message.includes("open youtube")) {
-            handlePopup("https://youtube.com", "_blank");
-            await speak("Opening YouTube...");
-        } else if (message.includes("open facebook")) {
-            handlePopup("https://facebook.com", "_blank");
-            await speak("Opening Facebook...");
-        } else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
-            handlePopup(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
-            await speak("This is what I found on the internet regarding " + message);
-        } else if (message.includes('wikipedia')) {
-            handlePopup(`https://en.wikipedia.org/wiki/${message.replace("wikipedia", "")}`, "_blank"); 
-            await speak("This is what I found on Wikipedia regarding " + message);
-        } else if (message.includes('time')) {
-            const time = new Date().toLocaleTimeString();
-            await speak("The time is " + time);
-        } else if (message.includes('date')) {
-            const date = new Date().toLocaleDateString();
-            await speak("The date is " + date);
+        if (message.includes('open google')) {
+            handlePopup("https://www.google.com", "_blank");
+            await speak("Opening Google Sir.");
         } else if (message.includes('play music')) {
-            await speak("Sure! Sir");
-            const musicUrl = 'https://audio.jukehost.co.uk/zOf6cHTSuVbmMxSfsGP003tTKsrfe6QN'; 
-            audio = new Audio(musicUrl);
+            audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
             audio.play();
-        } else if (message.includes('play another music')) {
-            await speak("Sure! Sir");
-            const musicUrl = 'https://audio.jukehost.co.uk/0Gjb18OPzbnGTCrg0QxoYWZdjVtLUiEY'; 
-            audio = new Audio(musicUrl);
-            audio.play();
-        
+            await speak("Playing music.");
         } else if (message.includes('stop music')) {
             if (audio) {
                 audio.pause();
